@@ -4,8 +4,48 @@ body {
 
 p {
     color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Dhurjati', sans-serif;
+    font-size: 40px;
 }
 
+/* Applies to the main page heading text */
 h1 {
     color: black;
+    text-align: center;
+    font-family: 'Dhurjati', sans-serif;
+    font-size: 60px;
+    margin-top: 35px;
+}
+
+/* Styles for the input element used to add a new To-Do */
+#text {
+    font-family: 'Dhurjati', sans-serif;
+    font-size: 30px;
+    min-width: 65%; /* This element's width must be at least 65% of the width of the container */
+    margin: 30px auto;
+    
+}
+
+/* Styles for the submit button */
+#submit {
+    text-align: center;
+    font-family: 'Dhurjati', sans-serif;
+    font-size: 30px;
+    margin: 30px auto;
+    border: none;
+    /* Allows us to add in a delay before the animation starts */
+    transition-delay: 2s;
+    /* Allows us to control how long the animation takes */
+    transition-duration: 1s;
+    /* Allows us to specify what property will be animated for the transition */
+    transition-property: all;
+    /* Allows us to modify the speed of the animation, such as starting out slow and then speeding up */
+    transition-timing-function: ease-out;
+    transition: background-color 3s ease 1s; /* We can use shorthand to specify all of the transition poroperties on one line - property, duration, timing-function, delay */
+    background-color: green
+}
+
+#submit:hover {
+    background-color: yellow;
 }
