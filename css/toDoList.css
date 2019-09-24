@@ -1,51 +1,115 @@
 body {
     background-image: linear-gradient(to right, rgb(79, 54, 107), rgb(231, 219, 111));
-}
-
-p {
-    color: rgb(0, 0, 0);
     text-align: center;
     font-family: 'Dhurjati', sans-serif;
-    font-size: 40px;
 }
 
 /* Applies to the main page heading text */
+
 h1 {
-    color: black;
-    text-align: center;
-    font-family: 'Dhurjati', sans-serif;
-    font-size: 60px;
-    margin-top: 35px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 25px;
+    font-size: 100pt;
+}
+
+/* Rules for the three paragraphs containing the instructions for the To-Do List */
+
+#instruction1 {
+    color:#032a44;
+    font-size: 30pt;
+}
+
+#instruction2 {
+    color:#c9c626;
+    font-size: 30pt;
+}
+
+#instruction3 {
+    color:#5e1414;
+    font-size: 30pt;
 }
 
 /* Styles for the input element used to add a new To-Do */
-#text {
-    font-family: 'Dhurjati', sans-serif;
-    font-size: 30px;
+
+input {
     min-width: 65%; /* This element's width must be at least 65% of the width of the container */
-    margin: 30px auto;
-    
+    font-size: 30pt;
 }
 
 /* Styles for the submit button */
+
 #submit {
-    text-align: center;
-    font-family: 'Dhurjati', sans-serif;
-    font-size: 30px;
-    margin: 30px auto;
+    background-color: #34ebbd;
     border: none;
-    /* Allows us to add in a delay before the animation starts */
-    transition-delay: 2s;
+    font-size: 30pt;
+    /* Allows us to add a delay before the animation starts */
+    transition-delay: 0s;
     /* Allows us to control how long the animation takes */
-    transition-duration: 1s;
+    transition-duration: 5s;
     /* Allows us to specify what property will be animated for the transition */
-    transition-property: all;
+    transition-property: background-color;
     /* Allows us to modify the speed of the animation, such as starting out slow and then speeding up */
-    transition-timing-function: ease-out;
-    transition: background-color 3s ease 1s; /* We can use shorthand to specify all of the transition poroperties on one line - property, duration, timing-function, delay */
-    background-color: green
+    transition-timing-function: ease-in-out;
+
+    transition: background-color 1.5s ease 1s; /* We can use shorthand to specify all of the transition properties in one line - property, duration, timing-function, delay */
 }
 
 #submit:hover {
-    background-color: yellow;
+    background-color: #d3eb34;
+}
+
+/* Styles for the ul and lis */
+
+ul {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 30pt;
+}
+
+li {
+    list-style: none;
+    border: 2px solid black;
+    font-size: 30pt;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: black;
+    background-color: #fcf800;
+    font-weight: bold;
+
+    transition: all 0.75s ease;
+    /* Webkit, for Safari and Opera */
+    -webkit-transition: all 0.75s ease;
+    /* Mozilla, for Firefox */
+    -moz-transition: all 0.75s ease;
+    /* Opera */
+    -o-transition: all 0.75s ease;
+}
+
+li:hover {
+    background-color: #32d13a;
+}
+
+/* Styles for when a list item is marked done */
+
+.done {
+    background-color: #40f756 !important;
+}
+
+/* Styles for when a list item is deleted */
+
+.delete {
+    display: none;
+}
+
+/*  Styles for the delete button inside the list items */
+
+/* Target any buttons whose parent element is a list item */
+li > button {
+    float: right;
+    border: none;
+    background: none;
+    color: white;
 }
